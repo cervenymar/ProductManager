@@ -28,6 +28,7 @@ namespace ProductManager
                 var products = db.Products.ToList();
                 foreach (var product in products)
                 {
+
                     Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}");
                 }
             }

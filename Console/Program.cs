@@ -8,12 +8,14 @@ namespace ProductManager
 {
     class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            
-                decimal test = 15.9m;
-                DatabaseControl.CreateRecord("Test", test);
-                DatabaseControl.ReadRecords();           
+            await ApiService.GetAndDisplayUserData();
+            //decimal test = 420.69m;
+            //DatabaseControl.CreateRecord("Test39", test);
+            //DatabaseControl.UpdateRecords(12, 69.420);
+            //DatabaseControl.DeleteRecords(7);
+            //DatabaseControl.ReadRecords();           
             
         }
     }

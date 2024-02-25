@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "LDT8PV5Okn5Inf6Kl4a2RvDS+2ZXUCkNv/AuD8EdJfoguPG52DAmhkIWBnkqC9pDhixx5B/N2YYb68BYYCHm5g==",
+  "dgSpecHash": "6CxYeeR7PZ0xxrRk6N0CT4xwuusPhQeHL70rY8fvtInZFEkexNquYhkh+oeu2tDms62DABg0/ydzWj8aQcFkIQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\orcai\\Projects\\CSharp\\ProductManager\\Console\\Console.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\orcai\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\orcai\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\orcai\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\orcai\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\orcai\\.nuget\\packages\\npgsql\\8.0.2\\npgsql.8.0.2.nupkg.sha512",
     "C:\\Users\\orcai\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.2\\npgsql.entityframeworkcore.postgresql.8.0.2.nupkg.sha512",
     "C:\\Users\\orcai\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
