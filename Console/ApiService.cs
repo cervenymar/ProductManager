@@ -9,12 +9,12 @@ namespace ProductManager
 {
     public class ApiService
     {
-        public static async Task GetAndDisplayUserData()
+        public static async Task GetAndDisplayUserData(string apiUrl)
         {
             using (HttpClient client = new HttpClient())
             {
                 // Zaslat GET požadavek na daný API endpoint
-                string apiUrl = "https://jsonplaceholder.typicode.com/users";
+                
                 HttpResponseMessage response = await client.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
