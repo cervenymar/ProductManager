@@ -13,19 +13,19 @@ namespace ProductManager
         {
             using (HttpClient client = new HttpClient())
             {
-                // Zaslat GET požadavek na daný API endpoint
+                // Send GET request to API endpoint {apiURL}
                 
                 HttpResponseMessage response = await client.GetAsync(apiUrl);
 
                 if (response.IsSuccessStatusCode)
                 {
-                    // Přečíst obsah odpovědi jako řetězec
+                    // Read content
                     string jsonContent = await response.Content.ReadAsStringAsync();
 
-                    // Deserializovat JSON data do pole objektů User
+                    // Deserialize JSON data into an Array
                     User[] users = JsonConvert.DeserializeObject<User[]>(jsonContent);
 
-                    // Zobrazit relevantní informace
+                    // Print data to console
                     foreach (var user in users)
                     {
                         Console.WriteLine($"User ID: {user.Id}");

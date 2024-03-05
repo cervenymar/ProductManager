@@ -19,7 +19,11 @@ namespace ProductManager
             {
                 using (var db = new ProductContext())
                 {
-                    
+                    /*
+                     * 
+                     * Check If Item with {Id} exists, create or update the item based on result.
+                     * 
+                     */
                     var productToCreate = db.Products.FirstOrDefault(p => p.Id == Id);
                     if (productToCreate == null)
                     {
@@ -59,7 +63,11 @@ namespace ProductManager
             {
                 using (var db = new ProductContext())
                 {
-                    // Read
+                    /*
+                     * 
+                     * Print Table records to console
+                     * 
+                     */
                     Console.WriteLine("Querying for all products:");
                     var products = db.Products.ToList();
                     foreach (var product in products)
@@ -89,7 +97,11 @@ namespace ProductManager
 
                 using (var db = new ProductContext())
                 {
-                    // Update
+                    /*
+                     * 
+                     * Update records in Database based on Id.
+                     * 
+                     */
                     Console.WriteLine($"Updating the price of Product with Id = {Id}");
                     var productToUpdate = db.Products.FirstOrDefault(p => p.Id == Id);
                     if (productToUpdate != null)
@@ -125,7 +137,11 @@ namespace ProductManager
             {
                 using (var db = new ProductContext())
                 {
-                    // Delete
+                    /*
+                     * 
+                     * Delete Records from Database
+                     * 
+                     */
                     Console.WriteLine("Deleting the second product...");
                     var productToDelete = db.Products.FirstOrDefault(p => p.Id == Id);
                     if (productToDelete != null)

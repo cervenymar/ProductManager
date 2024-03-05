@@ -17,7 +17,7 @@ namespace ProductManager
             await ApiService.GetAndDisplayUserData(apiUrl);
 
             /*
-             * Current Data backup
+             * Backup Current Data
              * Data saved into ./products_{timestamp}.txt
              * 
              */
@@ -30,6 +30,8 @@ namespace ProductManager
 
             /*
              * 
+             * Import information from products.txt into the database.
+             * Records with new IDs will be addded, if the IDs in the file match existing IDs in Database -> Data will be overwritten.
              * 
              */
             string sCurrentDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -38,12 +40,18 @@ namespace ProductManager
             {
                 ProductRW.ImportProducts(sFile);                
             }
+            Console.Write("#############");
+            DatabaseControl.ReadRecords();
 
+            /*
+             * 
+             * Remove record with ID = 1
+             * 
+             */
+            DatabaseControl.DeleteRecords(1);
+            Console.Write("#############");
+            DatabaseControl.ReadRecords();
 
-            
-            
-            DatabaseControl.ReadRecords();           
-            
         }
     }
 }

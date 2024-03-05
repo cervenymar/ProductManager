@@ -18,11 +18,9 @@ namespace ProductManager
         {
             try
             {
-
-
                 string jsonContent = File.ReadAllText(filePath);
                 List<Product> products = JsonConvert.DeserializeObject<List<Product>>(jsonContent);
-
+                //TODO Validate JSON structure
 
                 foreach (Product product in products)
                 {                    
@@ -32,14 +30,12 @@ namespace ProductManager
             }
             catch (FileNotFoundException ex)
             {
-                Console.WriteLine($"FileNotFoundException: {ex.Message}");
-                // Handle or log the specific exception
+                Console.WriteLine($"FileNotFoundException: {ex.Message}");               
                 
             }
             catch (JsonException ex)
             {
-                Console.WriteLine($"JsonException: {ex.Message}");
-                // Handle or log the specific exception
+                Console.WriteLine($"JsonException: {ex.Message}");                
                 
             }
             catch (Exception ex)
@@ -63,7 +59,7 @@ namespace ProductManager
                     Console.WriteLine("Querying for all products:");
                     var products = db.Products.ToList();
 
-                    // Write to file
+                    // Print to file
                     try
                     {
                         // Serialize the list of products to JSON
@@ -87,13 +83,7 @@ namespace ProductManager
                     catch (Exception ex)
                     {
                         Console.WriteLine($"Error writing products to file: {ex.Message}");
-                    }
-
-                    // Display products in the console
-                    /*foreach (var product in products)
-                    {
-                        Console.WriteLine($"Id: {product.Id}, Name: {product.Name}, Price: {product.Price}");
-                    }*/
+                    }                   
                 }
             }
             catch (Exception ex)
